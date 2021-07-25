@@ -1,4 +1,4 @@
-<form  class="container mt-3" (ngSubmit)="Submitform()">
+<form  class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-6">
         <button type="button" class="btn btn-primary mb-2" (click)="addAddress()">Add Address</button>
@@ -47,8 +47,8 @@
       </section>
 
       <div class="text-right">
-          <input type="submit" class="btn btn-success" value="Submit"  [disabled]="!addressArr?.address || !addressArr?.street || !addressArr?.city || !addressArr?.country" />
-      </div>
+          <input type="submit" class="btn btn-success" (click)="Submitform()" value="Submit" />
+      </div> 
       
     </div>
   </div>

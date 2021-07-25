@@ -11,7 +11,7 @@ print_r($_POST['address']);
 			$street = $_POST['street'][$i];
 			$city = $_POST['city'][$i];
 			$country = $_POST['country'][$i];
-      $sql = "INSERT INTO `address_data` (`address`, `street`, `city`, `country`) VALUES ('".$address."','".$street."','".$city."','".$country."');";
+      $sql = "INSERT INTO `address_data` (`address`, `street`, `city`, `country`) VALUES ('.$address','.$street','.$city','.$country')";
 
       if (mysqli_query($con, $sql)) {
           echo "New record created successfully";
@@ -21,5 +21,5 @@ print_r($_POST['address']);
     } 
   
 
-echo json_encode($data);
+
 ?>
